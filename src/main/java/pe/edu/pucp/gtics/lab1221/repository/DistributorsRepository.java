@@ -7,6 +7,4 @@ import pe.edu.pucp.gtics.lab1221.entity.Distributors;
 @Repository
 public interface DistributorsRepository extends JpaRepository<Distributors, Integer> {
 
-
-
 }

@@ -48,15 +48,26 @@
             <h2>Editar Distribuidora</h2>
         </div>
         <div class="container-fluid">
-            <form method="POST">
-                <!-- Completar -->
-                <!-- Completar -->
-                <!-- Completar -->
-                <!-- Completar -->
 
-                <a class="btn btn-danger">Cancelar</a>
+            <form method="POST" th:action="@{/distribuidoras/guardar}" th:object="${distribuidora}" >
+                <input  type="hidden" class="form-control" name="iddistribuidora" th:value="${distribuidora.iddistribuidora}">
+                <div class="mb-3">
+                    <label>Nombre</label>
+                    <input  type="text" class="form-control" th:field="*{nombre}">
+                </div>
+                <div class="mb-3">
+                    <label >Fundación</label>
+                    <input type="text" class="form-control" th:field="*{fundacion}">
+                </div>
+                <div class="mb-3">
+                    <label >Sede</label>
+                    <input  type="text" class="form-control" th:field="*{sede}" >
+                </div>
+
+                <a th:href="@{/distribuidoras/lista}" class="btn btn-danger">Cancelar</a>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
+
         </div>
         </main>
     </div>
